@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RESULT</title>
+</head>
+<body>
+<H1>Result: {{ question.text }}</H1>
+
+<ul>
+    {% for answer in question.answer_set.all %}
+    <li>{{ answer.text }} - {{ answer.num_of_votes }} vote{{ answer.num_of_votes|pluralize }}</li>
+    {% endfor %}
+
+</ul>
+<a href="{% url 'polls:detail' question.id %}">Vote Again</a>
+
+</body>
+</html>
