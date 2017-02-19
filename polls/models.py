@@ -15,7 +15,7 @@ class Question(models.Model):
 class Answer(models.Model):
     # region FIELDS
     question_id = models.ForeignKey(Question)
-    answer_text = models.CharField(max_length=200)
+    text = models.CharField(max_length=200)
     num_of_votes = models.IntegerField(default=0)
 
     # endregion
