@@ -21,4 +21,4 @@ class Answer(models.Model):
     # endregion
 
     def __str__(self):
-        return self.answer_text
+        return self.text
